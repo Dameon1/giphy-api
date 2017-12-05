@@ -1,0 +1,21 @@
+
+*{
+  box-sizing: border-box;
+}
+
+body {
+  color: lightBlue;
+  background-size:980px;
+  color: purple;
+}
+
+
+.tech-form {
+  float: right;
+}
+.gifs {
+  float: left;
+
+}
+
+/*css*/
