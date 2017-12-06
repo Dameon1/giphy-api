@@ -19,6 +19,9 @@ body {
 
 .gifContainer {
   float: left;
+  padding: 15px;
+  margin: 15px;
+  
 }
 
 #techButtons {

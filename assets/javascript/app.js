@@ -8,7 +8,7 @@
   console.log("working");
 
   // initial array to start things
-  let starterButtons = ["Tech","Bitcoin","Microsoft","Google","Apple","Litecoin","Doge","iOS","IBM","Windows"];
+  let starterButtons = ["General Electric","Bitcoin","Microsoft inc.","Google inc.","Apple inc.","Litecoin","Doge","Android","IBM","Windows"];
 
   // API key
   let key = "TJ3hFEuUCW6f24PJ1BdxxVsiFp4EkH0n";
@@ -36,30 +36,27 @@
  }
 };
 
-  // calling buttons function to start
-  buttons();
+  // working 'onclick' function that retrieves gifs
+  $(document.body).on("click", ".button", function() {
 
-  // working on click function that retrieves data
-  $(".button").on("click", function() {
+    // determines the buttons search for term with searchTerm variable
+    let searchTerm = $(this).attr("data");
+    console.log("You searched for:" + searchTerm + "");
 
-  // determines the buttons search for term with searchTerm variable
-  let searchTerm = $(this).attr("data");
-  console.log("You searched for:" + searchTerm + "");
+    // query location
+    let queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
+    searchTerm + "&api_key=" + key + "&limit=10";
 
-  // query location
-  let queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
-  searchTerm + "&api_key=" + key + "&limit=10";
+    //emptying out the content for new
+    $("#gifs").empty();
 
-  //emptying out the content for new
-  $("#gifs").empty();
+    //ajax request
 
-  //ajax request
-
-  $.ajax({
-      url: queryURL,
-      method: "GET"
-    })
-    .done(function(response) {
+    $.ajax({
+        url: queryURL,
+        method: "GET"
+      })
+      .done(function(response) {
 
       // variable to hold the response and a log to see what the response was
       let results = response.data;
@@ -71,7 +68,7 @@
       data attributes to change gifs state, attaches new <img> to the new <div>,
       attaches new div to #gifs id div*/
 
-      for (var i = 0; i < results.length; i++) {
+        for (var i = 0; i < results.length; i++) {
 
         //created new <div> with gifDiv variable
         let gifDiv = $("<div>");
@@ -90,16 +87,16 @@
         techImage.addClass("image");
 
         //added the attribute of "src" to initialize gif   // these next 4 .attrs controls result states
-        techImage.attr("src", results[i].images.fixed_width_still.url);
+        techImage.attr("src", results[i].images.fixed_height_still.url);
 
         //added the attribute of "data-state" as a toggle between start and stop
         techImage.attr("data-state", "still");
 
         //added the attribute of "data-animate" to access start function
-        techImage.attr("data-animate", results[i].images.fixed_width.url);
+        techImage.attr("data-animate", results[i].images.fixed_height.url);
 
         //added attribute of "data-still" for stopping
-        techImage.attr("data-still", results[i].images.fixed_width_still.url);
+        techImage.attr("data-still", results[i].images.fixed_height_still.url);
 
         //prepending(attaching) the text rating to the gif with p variable
         gifDiv.prepend(p);
@@ -109,9 +106,12 @@
 
         //prepending(attaching) all of new <div> to existing HTML id of #gifs
         $("#gifs").prepend(gifDiv);
-      }
-    });
+          }
+        });
 });
+
+
+
 
   //this allows the class images {created dynamically} to be clicked
   $(document.body).on("click", ".image", function() {
@@ -133,318 +133,30 @@
   let animate = $(this).attr("data-animate");
 
 
-  //conditional to change state of gif between play and still
-   if (state === "animate") {
-     console.log('You stopped a gif!');
-  $(this).attr("src", still);
-  $(this).attr("data-state", "still");
-} else  {
-  console.log('You started a gif!');
-  $(this).attr("src", animate);
-  $(this).attr("data-state",'animate');
-  };
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      //conditional to change state of gif between play and still
+      if (state === "animate") {
+        console.log('You stopped a gif!');
+        $(this).attr("src", still);
+        $(this).attr("data-state", "still");
+      } else  {
+        console.log('You started a gif!');
+        $(this).attr("src", animate);
+        $(this).attr("data-state",'animate');
+      };
+    });
+
+
+      $("#addTech").on('click', function () {
+        console.log("working");
+        let newTech = $("#tech-input").val().trim();
+        console.log('You added:'+ newTech);
+        starterButtons.push(newTech);
+        $("#techButtons").empty();
+        buttons();
+        $("#tech-input").val('');
+      });
+
+// calling buttons function to start
+buttons();
 
 });
