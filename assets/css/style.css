@@ -17,12 +17,10 @@ body {
   float: right;
 }
 
-.image
-
- {
-float: left;
-width: 250px;
+.gifContainer {
+  float: left;
 }
+
 #techButtons {
   padding: 3px;
   margin: 3px;
