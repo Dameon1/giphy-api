@@ -4,18 +4,28 @@
 }
 
 body {
-  color: lightBlue;
   background-size:980px;
   color: purple;
 }
 
+.button {
+  padding: 5px;
+  margin: 5px;
+}
 
 .tech-form {
   float: right;
 }
-.gifs {
-  float: left;
 
+.image
+
+ {
+float: left;
+width: 250px;
+}
+#techButtons {
+  padding: 3px;
+  margin: 3px;
 }
 
 /*css*/
