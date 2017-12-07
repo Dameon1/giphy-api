@@ -147,6 +147,9 @@
 
 
       $("#addTech").on('click', function () {
+
+
+        event.preventDefault();
         console.log("working");
         let newTech = $("#tech-input").val().trim();
         console.log('You added:'+ newTech);
