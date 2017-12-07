@@ -129,8 +129,7 @@
     console.log('You stopped a gif!');
     $(this).attr("src", still);
     $(this).attr("data-state", "still");
-  }
-  else  {
+  }  else  {
     console.log('You started a gif!');
     $(this).attr("src", animate);
     $(this).attr("data-state",'animate');
