@@ -8,6 +8,7 @@ body {
   color: purple;
 }
 
+
 .button {
   padding: 5px;
   margin: 5px;
@@ -15,18 +16,17 @@ body {
 
 .tech-form {
   float: right;
+  padding: 5px;
+  margin: 5px;
 }
 
 .gifContainer {
   float: left;
   padding: 15px;
   margin: 15px;
-  
+
 }
 
-#techButtons {
-  padding: 3px;
-  margin: 3px;
-}
+
 
 /*css*/
