@@ -8,7 +8,7 @@
   console.log("working");
 
   // initial array to start things
-  let starterButtons = ["General Electric","Bitcoin","Microsoft inc.","Google inc.","Apple inc.","Litecoin","Doge","Android","IBM","Windows"];
+  let starterButtons = ["Cat","Dog","Hampster","Iguana","Kangaroo","Koala","Leopard","Lion","Lizard","Mouse"];
 
   // API key
   let key = "TJ3hFEuUCW6f24PJ1BdxxVsiFp4EkH0n";
@@ -146,9 +146,9 @@
     });
 
 
-      $("#addTech").on('click', function () {
+      $("#addTech").on('click', function (event) {
 
-
+        console.log(event);
         event.preventDefault();
         console.log("working");
         let newTech = $("#tech-input").val().trim();
@@ -157,6 +157,7 @@
         $("#techButtons").empty();
         buttons();
         $("#tech-input").val('');
+
       });
 
 // calling buttons function to start
