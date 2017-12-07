@@ -161,31 +161,3 @@
 
   // closes out the document.ready
 });
-
-
-
-
-
-
-
-
-/*
-
-      $("#addTech").on('click', function (event) {
-        debugger
-        console.log(event);
-        event.preventDefault();
-        console.log("working");
-        let newTech = $("#tech-input").val().trim();
-        console.log('You added:'+ newTech);
-        starterButtons.push(newTech);
-        $("#techButtons").empty();
-        buttons();
-        $("#tech-input").val('');
-      });
-
-// calling buttons function to start
-buttons();
-
-});
-*/
