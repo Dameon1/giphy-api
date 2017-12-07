@@ -169,4 +169,5 @@
   // calling buttons function to start
   buttons();
 
+  //closes out document.ready
 });
