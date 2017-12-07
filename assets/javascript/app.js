@@ -8,7 +8,7 @@
   console.log("working");
 
   // initial array to start things
-  let starterButtons = ["General Electric","Bitcoin","Microsoft inc.","Google inc.","Apple inc.","Litecoin","Doge","Android","IBM","Windows"];
+  let starterButtons = ["Cat","Dog","Duck","Elephant","Kangaroo","Koala","Iguana","Leopard","Lion","Lizard"];
 
   // API key
   let key = "TJ3hFEuUCW6f24PJ1BdxxVsiFp4EkH0n";
@@ -161,3 +161,31 @@
 
   // closes out the document.ready
 });
+
+
+
+
+
+
+
+
+/*
+
+      $("#addTech").on('click', function (event) {
+        debugger
+        console.log(event);
+        event.preventDefault();
+        console.log("working");
+        let newTech = $("#tech-input").val().trim();
+        console.log('You added:'+ newTech);
+        starterButtons.push(newTech);
+        $("#techButtons").empty();
+        buttons();
+        $("#tech-input").val('');
+      });
+
+// calling buttons function to start
+buttons();
+
+});
+*/
