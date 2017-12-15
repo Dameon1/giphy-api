@@ -1,8 +1,5 @@
 
 
-
-
-
 // document ready... allows the page to load completely before linking anything to the html
 /////////////////....very important
 
@@ -102,14 +99,8 @@
   });
 });
 
-  // submit button functionality
-  $("#addTech").on('click', function () {
 
-  // created a variable to hold the user input
-  let newTech = $("#tech-input").val().trim();
 
-  // a log of what was added
-  console.log('You added:'+ newTech);
 
   // this allows the class images {created dynamically} to be clicked
   $(document.body).on("click", ".image", function() {
