@@ -102,8 +102,14 @@
   });
 });
 
+  // submit button functionality
+  $("#addTech").on('click', function () {
 
+  // created a variable to hold the user input
+  let newTech = $("#tech-input").val().trim();
 
+  // a log of what was added
+  console.log('You added:'+ newTech);
 
   // this allows the class images {created dynamically} to be clicked
   $(document.body).on("click", ".image", function() {
@@ -129,7 +135,8 @@
     console.log('You stopped a gif!');
     $(this).attr("src", still);
     $(this).attr("data-state", "still");
-  }  else  {
+  }
+  else  {
     console.log('You started a gif!');
     $(this).attr("src", animate);
     $(this).attr("data-state",'animate');
@@ -137,8 +144,8 @@
 });
 
   // submit button functionality
-  $("#addTech").on('click', function () {
-
+  $("#addTech").on('click', function(event) {
+    event.preventDefault();
   // created a variable to hold the user input
   let newTech = $("#tech-input").val().trim();
 
