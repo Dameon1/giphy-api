@@ -134,8 +134,8 @@
 });
 
   // submit button functionality
-  $("#addTech").on('click', function() {
-
+  $("#addTech").on('click', function(event) {
+    event.preventDefault();
   // created a variable to hold the user input
   let newTech = $("#tech-input").val().trim();
 
