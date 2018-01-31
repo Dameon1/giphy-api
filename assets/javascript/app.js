@@ -79,7 +79,7 @@
   // created a new <img> tag to hold gif
   let techImage = $("<img>");
   // added class .image to the image
-  techImage.addClass("image");
+  //techImage.addClass("image");
   // added the attribute of "src" to initialize gif   // these next 4 .attrs controls result states
   techImage.attr("src", results[i].images.fixed_height_still.url);
   // added the attribute of "data-state" as a toggle between start and stop
