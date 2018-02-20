@@ -52,7 +52,6 @@
     $("#gifs").empty();
 
     // ajax request
-
     $.ajax({
         url: queryURL,
         method: "GET"
