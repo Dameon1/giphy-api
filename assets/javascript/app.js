@@ -62,6 +62,7 @@ $(document).ready(function() {
       data attributes to change gifs state, attaches new <img> to the new <div>,
       attaches new div to #gifs id div*/
 
+
         for (var i = 0; i < results.length; i++) {
           // created new <div> with gifDiv variable
           let gifDiv = $('<div>');
@@ -90,6 +91,7 @@ $(document).ready(function() {
           $('#gifs').prepend(gifDiv);
         }
       });
+
   });
 
   // this allows the class images {created dynamically} to be clicked
