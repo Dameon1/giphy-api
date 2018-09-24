@@ -25,22 +25,26 @@
 <body>
 
     <!-- A header -->
-    <h1>
-      Click a button, Click a video
-    </h1>
+    <header>
+      <h1>        
+       Click a button, Click a video
+      </h1>
+      <form class="tech-form">
+        <label form="tech-input">
+          Add an animal button here =>
+        </label>
+        <input type="text" id="tech-input" value="giraffe">
+        <input type='submit' id='addTech' value ="ADD">
+      </form>
+        
+    </header>
+   
 
-    <div id="techButtons">
+    <div id="techButtons" class="techButtons">
     <!-- Buttons go inside of here-->
     </div>
 
-    <!-- THe form to add new buttons-->
-    <form class="tech-form">
-      <label form="tech-input">
-        Add an animal button here.
-      </label>
-      <input type="text" id="tech-input" value="giraffe">
-      <input type='submit' id='addTech' value ="ADD">
-    </form>
+  
 
     <div id = "gifs" class = "gifs">
     <!-- The gifs will go inside of here-->

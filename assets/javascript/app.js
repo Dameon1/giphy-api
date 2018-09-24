@@ -69,11 +69,11 @@ $(document).ready(function() {
           // created variable to hold rating
           let rating = results[i].rating;
           // created a variable for the ratings text and attached it to a <p> tag
-          let p = $('<p>').text('Rating: ' + rating);
+          let p = $('<p >').text('Rating: ' + rating);
           // created a new <img> tag to hold gif
           let techImage = $('<img>');
           // added class .image to the image
-          techImage.addClass('image');
+          techImage.addClass('image size');
           // added the attribute of "src" to initialize gif   // these next 4 .attrs controls result states
           techImage.attr('src', results[i].images.fixed_height_still.url);
           // added the attribute of "data-state" as a toggle between start and stop
@@ -82,10 +82,10 @@ $(document).ready(function() {
           techImage.attr('data-animate', results[i].images.fixed_height.url);
           // added attribute of "data-still" for stopping
           techImage.attr('data-still', results[i].images.fixed_height_still.url);
-          // prepending(attaching) the text rating to the gif with p variable
-          gifDiv.prepend(p);
           // prepending(attaching) the gif to the new <div>
           gifDiv.prepend(techImage);
+          // prepending(attaching) the text rating to the gif with p variable
+          gifDiv.prepend(p);
           // prepending(attaching) all of new <div> to existing HTML id of #gifs
           $('#gifs').prepend(gifDiv);
         }
@@ -117,7 +117,7 @@ $(document).ready(function() {
       $(this).attr('src', animate);
       $(this).attr('data-state','animate');
     }
-});
+  });
 
   // submit button functionality
   $('#addTech').on('click', function(event) {
