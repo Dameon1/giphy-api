@@ -6,7 +6,7 @@
 $(document).ready(function() {
 
   // initial array to start things
-  let starterButtons = ['Cat','Dog','Duck','Elephant','Kangaroo','Koala','Iguana','Leopard','Lion','Lizard'];
+  let starterButtons = ['Crying Jordan','Sips Tea','Deal With It','Like a Boss','Dank Memes','Kermit','Feels','Hair Flip','Salt Bae','Confused'];
 
   // API key
   let key = 'TJ3hFEuUCW6f24PJ1BdxxVsiFp4EkH0n';
